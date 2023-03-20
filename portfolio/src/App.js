@@ -1,10 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import logo from "./logo.svg";
+import "./App.css";
+import { NavBar } from "./Compnonte/NavBar";
+import { MainRoute } from "./Compnonte/MainRoute";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Ranjan yadav 'Full-Stack-Web-Developer'</h1>
+    <div className="App" style={{display:'flex',gap:'3px'}}>
+      <div>
+        <NavBar />
+      </div>
+      <div style={{width:'70p%'}}>
+        <MainRoute />
+      </div>
     </div>
   );
 }
