@@ -10,14 +10,14 @@ import { Project } from '../Pages/Project'
 export const MainRoute = () => {
   return (
     <div style={{width:'900px',marginTop:'40px'}}>
-        <Routes>
+        {/* <Routes>
             <Route path='/' element={<HomePage/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/skills' element={<Skills/>}/>
               <Route path='/projects' element={<Project/>}/>
             <Route path='/contact' element={<Conact/>}/>
           
-        </Routes>
+        </Routes> */}
     </div>
   )
 }

@@ -2,6 +2,8 @@ import React from 'react'
 
 export const About = () => {
   return (
-    <div>About</div>
+    <div id='about' style={{height:'1000px',backgroundColor:'yellow'}}>
+      <h1>About</h1>
+    </div>
   )
 }
