@@ -12,11 +12,11 @@ import { Conact } from "./Pages/Conact";
 
 function App() {
   return (
-    <div className="App" style={{display:'flex',gap:'3px'}}>
-      <div>
+    <div className="App" style={{display:'flex'}}>
+      <div style={{position: "fixed",}}>
         <SideBar />
       </div>
-      <div style={{width:'70p%'}}>
+      <div  style={{width:'70%', marginLeft:'280px'}}>
         <HomePage/>
         <About/>
         <Project/>
