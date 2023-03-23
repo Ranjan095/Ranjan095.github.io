@@ -3,7 +3,6 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { SideBar } from "./Compnonte/SideBar";
-import { MainRoute } from "./Compnonte/MainRoute";
 import { HomePage } from "./Pages/HomePage";
 import { About } from "./Pages/About";
 import { Project } from "./Pages/Project";
@@ -19,8 +18,8 @@ function App() {
       <div  style={{width:'70%', marginLeft:'280px'}}>
         <HomePage/>
         <About/>
-        <Project/>
         <Skills/>
+        <Project/>
         <Conact/>
       </div>
     </div>

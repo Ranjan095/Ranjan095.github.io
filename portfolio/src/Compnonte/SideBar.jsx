@@ -8,13 +8,13 @@ export const SideBar = () => {
   return (
     <Div id="nav-menu" >
       <h1 style={{ paddingBottom: "50px", fontFamily: "cursive" }}>Ranjan</h1>
-      <a id='st' href="#home">Home</a>  
+      <a id='st' href="#home"> Home</a>  
       <a id='st' href="#about">About</a>  
       <a id='st' href="#skills">Skills</a>
       <a id='st' href="#project">Project</a>
       <a id='st' href="#contact">Contact</a>
       
-      <button id='myid' className="nav-link.resume my"  >Resume</button>
+      <button  id='myid' className="nav-link.resume my"  >Resume <i class="fa fa-download" aria-hidden="true"></i></button>
     </Div>
 
 // style={{padding:'10px',borderRadius:'20px',background:'green',color:'white',border:'none',hover:{background:'red'}}}
