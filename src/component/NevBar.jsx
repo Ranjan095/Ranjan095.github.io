@@ -65,13 +65,13 @@ export const NevBar = () => {
             size={"lg"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
-            display={{ md: "none" }}
+            // display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={20} alignItems={"center"}>
-            <Box>
+            {/* <Box>
               <Heading color={'teal'}>Ranjan Yadav</Heading>
-            </Box>
+            </Box> */}
             <HStack
               as={"nav"}
               spacing={4}
@@ -83,11 +83,12 @@ export const NevBar = () => {
               ))}
             </HStack>
           </HStack>
+          <Box marginRight={'3%'}>
           <Flex alignItems={"center"}>
-            <Button variant={"solid"} colorScheme={"teal"} size={"sm"} mr={2}>
+            <Button variant={"solid"} colorScheme={"teal"} size={"sm"} mr={0}>
               Resume
             </Button>
-            <Button variant={"solid"} size={"sm"} mr={2}>
+            <Button variant={"solid"} size={"sm"} mr={0}>
               <Avatar
                 size={"sm"}
                 src={
@@ -95,7 +96,7 @@ export const NevBar = () => {
                 }
               />
             </Button>
-            <Button variant={"solid"} size={"sm"} mr={2}>
+            <Button variant={"solid"} size={"sm"} mr={0}>
               <Avatar
                 size={"sm"}
                 src={
@@ -103,7 +104,7 @@ export const NevBar = () => {
                 }
               />
             </Button>
-            <Button variant={"solid"} size={"sm"} mr={2}>
+            <Button variant={"solid"} size={"sm"} mr={0}>
               <Avatar
                 size={"sm"}
                 src={
@@ -135,6 +136,7 @@ export const NevBar = () => {
               </MenuList>
             </Menu> */}
           </Flex>
+          </Box>
         </Flex>
 
         {isOpen ? (

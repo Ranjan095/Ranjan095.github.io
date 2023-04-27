@@ -19,26 +19,35 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+  ScaleFade,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
-import { HomePage } from "../Pages/HomePage";
-import { Project } from "../Pages/Project";
-import { Contact } from "../Pages/Contact";
-import { Skills } from "../Pages/Skills";
-import { About } from "../Pages/About";
+import { transform } from "framer-motion";
+import { scrollToBottom } from "react-scroll/modules/mixins/animate-scroll";
 
 export const NevBar = () => {
+  let ids={
+    HOME:'#home',
+    ABOUT:'#about',
+    SKILLS:'#skills',
+    PROJECT:'#project',
+    CONTACT:'#contact'
+  }
   const Links = ["HOME", "ABOUT", "SKILLS", "PROJECT", "CONTACT"];
   const NavLink = ({ children }) => (
     <Link
       px={2}
       py={1}
       rounded={"md"}
+      fontWeight={'bold'}
       _hover={{
         textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
+        bg: useColorModeValue("teal.300", "gray.100"),   
       }}
-      href={About}
+      
+      
+      
+      href={ids[children]}
     >
       {children}
       
@@ -59,7 +68,7 @@ export const NevBar = () => {
             display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack spacing={8} alignItems={"center"}>
+          <HStack spacing={20} alignItems={"center"}>
             <Box>
               <Heading color={'teal'}>Ranjan Yadav</Heading>
             </Box>
