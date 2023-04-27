@@ -1,5 +1,16 @@
 /** @format */
-
+import "./skills.css";
+import {
+  Image,
+  Box,
+  Heading,
+  Grid,
+  GridItem,
+  Text,
+  Center,
+  SimpleGrid,
+  background,
+} from "@chakra-ui/react";
 import React from "react";
 import styled from "styled-components";
 
@@ -21,13 +32,13 @@ export const Skills = () => {
       name: "React",
       src: "https://cdn-icons-png.flaticon.com/128/3459/3459528.png",
     },
-    {
-      name: "Chakra",
-      src: "data:image/png;base64,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",
-    },
+    // {
+    //   name: "Chakra",
+    //   src: "data:image/png;base64,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",
+    // },
     {
       name: "Redux",
-      src: "data:image/png;base64,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",
+      src: "https://upload.wikimedia.org/wikipedia/commons/3/30/Redux_Logo.png",
     },
     {
       name: "TypeScript",
@@ -37,70 +48,43 @@ export const Skills = () => {
       name: "Github",
       src: "https://cdn-icons-png.flaticon.com/128/1051/1051326.png",
     },
-  ];
-  let backendLogo = [
     {
       name: "NodeJs",
-      src: "https://t3.ftcdn.net/jpg/03/52/67/82/240_F_352678266_NFcwIwhhY76mkQItT4lCxyxcCTP3LgvY.jpg",
+      src: "https://nodejs.org/static/images/logo.svg",
     },
     {
       name: "ExpressJs",
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuahAnkuoLBXCwgerXUrsvg4i2kwOw9Iqf8g&usqp=CAU",
+      src: "https://www.liblogo.com/img-logo/ex124e081-express-logo-express-fashion-stores-logo-png-transparent-amp-svg-vector-freebie.png",
     },
     {
       name: "MongoDb",
-      src: "https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Emblem.jpg",
+      src: "https://webimages.mongodb.com/_com_assets/cms/kuyjf3vea2hg34taa-horizontal_default_slate_blue.svg?auto=format%252Ccompress",
     },
   ];
 
   return (
-    <Div id="skills">
-      <h1>My Skills</h1>
-      <div className="box">
-        <h1>Frontend</h1>
-      </div>
-      <div className="allTecStack">
+    <Box padding={'6%'} textAlign={'center'} id="skills">
+      <Heading>TECH SKILLS</Heading>
+      <SimpleGrid
+        columns={{ sm: 2, md: 3, lg: 4, xl: 5 }}
+        spacing="40px"
+        marginTop={"20px"}
+      >
         {frontendLogo.map((ele) => {
           return (
-            <div className="singlePro">
-              <img src={ele.src} alt="tecStack Logo" />
-              <br />
-              <b>{ele.name}</b>
-            </div>
+            <Box key={Math.random()} className="tec-stack">
+              <Center width={"100%"} height={"100%"}>
+                <Image className="skillImage" src={ele.src} alt="tecStack Logo" />
+              </Center>
+              <Box>
+                <Text fontWeight="bold" fontSize="md">
+                  {ele.name}
+                </Text>
+              </Box>
+            </Box>
           );
         })}
-      </div>
-      <div className="box">
-        <h1>Backend</h1>
-      </div>
-      <div className="allTecStack">
-        {backendLogo.map((ele) => {
-          return (
-            <div className="singlePro">
-              <img src={ele.src} alt="TecStack img" />
-              <br />
-              <b>{ele.name}</b>
-            </div>
-          );
-        })}
-      </div>
-    </Div>
+      </SimpleGrid>
+    </Box>
   );
 };
-const Div = styled.div`
-  .box {
-    text-align: center;
-    font-size: 25px;
-  }
-  .allTecStack {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-  }
-  .allTecStack img {
-    width: 80px;
-  }
-  .singlePro {
-    margin: 20px;
-  }
-`;
