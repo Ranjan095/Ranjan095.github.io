@@ -25,43 +25,56 @@ import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 import { transform } from "framer-motion";
 import { scrollToBottom } from "react-scroll/modules/mixins/animate-scroll";
 
+import Resume from "../Assets/Resume.pdf"
+
 export const NevBar = () => {
-  let ids={
-    HOME:'#home',
-    ABOUT:'#about',
-    SKILLS:'#skills',
-    PROJECT:'#project',
-    CONTACT:'#contact'
-  }
+  let handleResume = () => {
+    window.open("https://drive.google.com/file/d/1BSkRFvymsOMLpOmpcwrocVyl6K8e-DN4/view?usp=sharing")
+  };
+
+  let ids = {
+    HOME: "#home",
+    ABOUT: "#about",
+    SKILLS: "#skills",
+    PROJECT: "#project",
+    CONTACT: "#contact",
+  };
   const Links = ["HOME", "ABOUT", "SKILLS", "PROJECT", "CONTACT"];
   const NavLink = ({ children }) => (
     <Link
       px={2}
       py={1}
       rounded={"md"}
-      fontWeight={'bold'}
+      fontWeight={"bold"}
       _hover={{
         textDecoration: "none",
-        bg: useColorModeValue("teal.300", "gray.100"),   
+        bg: useColorModeValue("teal.300", "gray.100"),
       }}
-      
-      
-      
       href={ids[children]}
     >
       {children}
-      
     </Link>
   );
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div style={{position:'fixed',overflow: "hidden",top:"0%",width:"100%"}}>
+    <div
+      style={{
+        position: "fixed",
+        overflow: "hidden",
+        top: "0%",
+        width: "100%",
+      }}
+    >
       {/* <> */}
-      <Box bg={useColorModeValue("gray.100", "gray.900")} color={'black'} px={4}>
+      <Box
+        bg={useColorModeValue("gray.100", "gray.900")}
+        color={"black"}
+        px={4}
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
-          color={'black'}
+            color={"black"}
             size={"lg"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
@@ -76,44 +89,54 @@ export const NevBar = () => {
               as={"nav"}
               spacing={4}
               display={{ base: "none", md: "flex" }}
-              color={'black'}
+              color={"black"}
             >
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </HStack>
           </HStack>
-          <Box marginRight={'3%'}>
-          <Flex alignItems={"center"}>
-            <Button variant={"solid"} colorScheme={"teal"} size={"sm"} mr={0}>
-              Resume
-            </Button>
-            <Button variant={"solid"} size={"sm"} mr={0}>
-              <Avatar
-                size={"sm"}
-                src={
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsjyMub5re7ZkmcZ3sa85cCuWT5k1wZ2JICA&usqp=CAU"
-                }
-              />
-            </Button>
-            <Button variant={"solid"} size={"sm"} mr={0}>
-              <Avatar
-                size={"sm"}
-                src={
-                  "https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png"
-                }
-              />
-            </Button>
-            <Button variant={"solid"} size={"sm"} mr={0}>
-              <Avatar
-                size={"sm"}
-                src={
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxJ9BLaQr8gi24WdvoAcllLM31YXU-35ip4A&usqp=CAU"
-                }
-              />
-            </Button>
+          <Box marginRight={"3%"}>
+            <Flex alignItems={"center"}>
+              <Button
+              id="resume-button-1"
+              onClick={handleResume} variant={"solid"} colorScheme={"teal"} size={"sm"} mr={0}>
+                <Link
+                id="resume-link-1"
+                  target="_blank"
+                  href={Resume}
+                  download={"Ranjan_Yadav_Resume"}
+                >
+                  Resume
+                </Link>
+              </Button>
 
-            {/* <Menu>
+              <Button variant={"solid"} size={"sm"} mr={0}>
+                <Avatar
+                  size={"sm"}
+                  src={
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsjyMub5re7ZkmcZ3sa85cCuWT5k1wZ2JICA&usqp=CAU"
+                  }
+                />
+              </Button>
+              <Button variant={"solid"} size={"sm"} mr={0}>
+                <Avatar
+                  size={"sm"}
+                  src={
+                    "https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png"
+                  }
+                />
+              </Button>
+              <Button variant={"solid"} size={"sm"} mr={0}>
+                <Avatar
+                  size={"sm"}
+                  src={
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxJ9BLaQr8gi24WdvoAcllLM31YXU-35ip4A&usqp=CAU"
+                  }
+                />
+              </Button>
+
+              {/* <Menu>
               <MenuButton
                 as={Button}
                 rounded={"full"}
@@ -135,7 +158,7 @@ export const NevBar = () => {
                 <MenuItem>Link 3</MenuItem>
               </MenuList>
             </Menu> */}
-          </Flex>
+            </Flex>
           </Box>
         </Flex>
 

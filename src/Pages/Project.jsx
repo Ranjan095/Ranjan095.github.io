@@ -20,12 +20,12 @@ export const Project = () => {
   const myProject = [
     {
       image: orbitz,
-      name: "Orbitz",
+      name: "Travel At Ease",
       tecStack: "HTML | CSS | JS | REACT | REDUX | CHAKRA" ,
       discription:
-        "KPC is an online non-veg food website where user can buy different kinds of chicken dishes and get delivered at the door-step within 24hrs.",
-      site: "https://kpc.netlify.app/",
-      gitHub: "https://github.com/rajeshuser/tall-question-6900",
+        "Travel At Ease is an online booking platform,where we can book different services just as hotels, flights, and car. No matter who you are or where you’re going, you deserve to travel freely. Orbitz has advocated for safe, inclusive travel for more than 20 years",
+      site: "https://travelatease.netlify.app/",
+      gitHub: "https://github.com/AkshayKumarGaurav/paltry-rain-9292",
     },
     {
       image: KFC,
@@ -41,9 +41,9 @@ export const Project = () => {
       name: "Orbitz",
       tecStack: "HTML | CSS | JS | REACT | REDUX | CHAKRA" ,
       discription:
-        "KPC is an online non-veg food website where user can buy different kinds of chicken dishes and get delivered at the door-step within 24hrs.",
-      site: "https://kpc.netlify.app/",
-      gitHub: "https://github.com/rajeshuser/tall-question-6900",
+        "Orbitz is an online booking platform,where we can book different services just as hotels, flights, and car. No matter who you are or where you’re going, you deserve to travel freely. Orbitz has advocated for safe, inclusive travel for more than 20 years",
+      site: "https://travelatease.netlify.app/",
+      gitHub: "https://github.com/AkshayKumarGaurav/paltry-rain-9292",
     },
     {
       image: KFC,
@@ -53,7 +53,7 @@ export const Project = () => {
         "KPC is an online non-veg food website where user can buy different kinds of chicken dishes and get delivered at the door-step within 24hrs.",
       site: "https://kpc.netlify.app/",
       gitHub: "https://github.com/rajeshuser/tall-question-6900",
-    }
+    },
   ];
 
   return (
