@@ -66,7 +66,7 @@ export const Skills = () => {
     <Box padding={'6%'} textAlign={'center'} id="skills">
       <Heading>TECH SKILLS</Heading>
       <SimpleGrid
-        columns={{ sm: 2, md: 3, lg: 4, xl: 5 }}
+        columns={{ base: 2, md: 3, lg: 4, xl: 5 }}
         spacing="40px"
         marginTop={"20px"}
       >

@@ -18,9 +18,9 @@ export const About = () => {
   return (
     <Box padding={'6%'} id="about">
       <Heading padding={'1%'}>About Me</Heading>
-      <Heading as="h4" size="md" fontFamily='cursive'>
-        I am a Developer who know HTML, CSS, JAVASCRIPT,REACT,REDUX,CHAKRA, NODEJS, EXPRESS.JS,
-        MONGODB, POSTMAN. Logical and result-driven full-stack developer
+      <Heading as="h4" size="md" fontFamily="sans-serif" lineHeight={8} textAlign={"justify"}>
+        I am a Developer who know HTML, CSS, JavaScript, ReactJS, Redux, Chakra, NodeJS, ExpressJS,
+        MongoDB, Postman. Logical and result-driven full-stack developer
         dedicated to building and optimizing user-focused websites. Technically
         proficient and analytic problem solver with a calm and focused demeanor.
       </Heading>
