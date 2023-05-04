@@ -66,18 +66,18 @@ export const Skills = () => {
     <Box padding={'6%'} textAlign={'center'} id="skills">
       <Heading>TECH SKILLS</Heading>
       <SimpleGrid
-        columns={{ base: 2, md: 3, lg: 4, xl: 5 }}
+        columns={{ base: 3, md: 3, lg: 4, xl: 5 }}
         spacing="40px"
         marginTop={"20px"}
       >
         {frontendLogo.map((ele) => {
           return (
-            <Box key={Math.random()} className="tec-stack">
+            <Box key={Math.random()} className="tec-stack skills-card">
               <Center width={"100%"} height={"100%"}>
-                <Image className="skillImage" src={ele.src} alt="tecStack Logo" />
+                <Image className="skillImage skills-card-img" src={ele.src} alt="tecStack Logo" />
               </Center>
               <Box>
-                <Text fontWeight="bold" fontSize="md">
+                <Text className="skills-card-name" fontWeight="bold" fontSize="md">
                   {ele.name}
                 </Text>
               </Box>

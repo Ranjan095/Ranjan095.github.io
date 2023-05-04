@@ -57,22 +57,22 @@ export const Project = () => {
   ];
 
   return (
-    <Box padding={'6%'} id="project">
+    <Box padding={'6%'} id="projects">
       <Box textAlign={"center"} >
         <Heading>My Projects</Heading>
       </Box>
       <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 2 }} marginTop={"3%"}>
         {myProject?.map((el) => {
           return (
-            <Box className="proBox" key={Math.random()}>
+            <Box className="proBox project-card" key={Math.random()}>
               <Link target={"_blank"} href={el.site}>
-                <Image className="proImage" src={el.image}></Image>
+                <Image className="proImage project-card" src={el.image}></Image>
               </Link>
 
               <Box>
                 {" "}
-                <Heading>{el.name}</Heading>
-                <Heading as="h4" size="md">
+                <Heading className="project-title">{el.name}</Heading>
+                <Heading className="project-tech-stack" as="h4" size="md">
                   Tech Stack: {el.tecStack}
                 </Heading>
               </Box>
@@ -81,14 +81,14 @@ export const Project = () => {
           <Box width={'70%'}></Box>
             <Box  alignItems={'flex-end'} margin={"4%"}>
                 <Flex>
-                  <Link href={el.gitHub} target={"_blank"}>
+                  <Link className="project-github-link" href={el.gitHub} target={"_blank"}>
                     <Image
                   
                       width={"30%"}
                       src="https://cdn-icons-png.flaticon.com/128/1051/1051326.png"
                     ></Image>
                   </Link>
-                  <Link href={el.site} target={"_blank"}>
+                  <Link className="project-deployed-link" href={el.site} target={"_blank"}>
                     <Heading as="h3" size="md">
                       Site
                     </Heading>
@@ -100,7 +100,7 @@ export const Project = () => {
             </Box>
 
               <UnorderedList>
-                <ListItem fontSize={"lg"}>{el.discription}</ListItem>
+                <ListItem className="project-description" fontSize={"lg"}>{el.discription}</ListItem>
               </UnorderedList>
             </Box>
           );

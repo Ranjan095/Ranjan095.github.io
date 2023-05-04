@@ -36,7 +36,7 @@ export const NevBar = () => {
     HOME: "#home",
     ABOUT: "#about",
     SKILLS: "#skills",
-    PROJECT: "#project",
+    PROJECT: "#projects",
     CONTACT: "#contact",
   };
   const Links = ["HOME", "ABOUT", "SKILLS", "PROJECT", "CONTACT"];
@@ -46,11 +46,13 @@ export const NevBar = () => {
       py={1}
       rounded={"md"}
       fontWeight={"bold"}
+  
       _hover={{
         textDecoration: "none",
         bg: useColorModeValue("teal.300", "gray.100"),
       }}
       href={ids[children]}
+      className={`nav-link ${(ids[children].split("#")[1])}`}
     >
       {children}
     </Link>
@@ -61,6 +63,7 @@ export const NevBar = () => {
     <div
       style={{
         position: "fixed",
+        zIndex:'100',
         overflow: "hidden",
         top: "0%",
         width: "100%",
@@ -72,37 +75,45 @@ export const NevBar = () => {
         color={"black"}
         px={4}
       >
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+        <Flex h={16} alignItems={"center"} justifyContent={"space-around"} gap={"15%"}>
           <IconButton
             color={"black"}
             size={"lg"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
-            // display={{ md: "none" }}
+            display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={20} alignItems={"center"}>
             {/* <Box>
               <Heading color={'teal'}>Ranjan Yadav</Heading>
             </Box> */}
+            <Box
+            width={"100%"}
+            // border={"1px solid red"}
+            >
             <HStack
               as={"nav"}
               spacing={4}
               display={{ base: "none", md: "flex" }}
               color={"black"}
+              
+             
             >
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </HStack>
+            </Box>
           </HStack>
-          <Box marginRight={"3%"}>
+          <Box  marginRight={"3%"}>
             <Flex alignItems={"center"}>
               <Button
-              id="resume-button-1"
+              id='resume-button-1'
+              className='nav-link resume'
               onClick={handleResume} variant={"solid"} colorScheme={"teal"} size={"sm"} mr={0}>
                 <Link
-                id="resume-link-1"
+                 id='resume-link-1'
                   target="_blank"
                   href={Resume}
                   download={"Ranjan_Yadav_Resume"}

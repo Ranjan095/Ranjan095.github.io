@@ -10,7 +10,7 @@ export const HomePage = () => {
         <Box>
           <Heading>Hello, my name is</Heading>
           <Heading
-            id="user-detail-name"
+           id="user-detail-name"
             style={{ fontFamily: "cursive", color: "red" }}
           >
             Ranjan Yadav
@@ -20,6 +20,7 @@ export const HomePage = () => {
 
         <Box>
           <Image
+          class="home-img"
             style={{
               width: "60%",
               height: "60%",

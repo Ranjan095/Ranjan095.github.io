@@ -22,7 +22,7 @@ export const Contact = () => {
           href="https://mail.google.com/mail/u/0/#inbox?compose=new/"
         >
           {" "}
-          <ListItem>iranjan095@gmail.com</ListItem>
+          <ListItem id="contact-email">iranjan095@gmail.com</ListItem>
         </Link>
         <Link
           target="_blank"
@@ -30,7 +30,7 @@ export const Contact = () => {
           href="https://web.whatsapp.com/"
         >
           {" "}
-          <ListItem>+917079062877</ListItem>
+          <ListItem id="contact-phone">+917079062877</ListItem>
         </Link>
         <Link
           target="_blank"
@@ -41,7 +41,7 @@ export const Contact = () => {
           <ListItem>Madhubani Bihar</ListItem>
         </Link>
       </UnorderedList>
-      <Button variant={"solid"} size={"sm"} mr={2}>
+      <Button  id="contact-linkedin" variant={"solid"} size={"sm"} mr={2}>
               <Avatar
                 size={"sm"}
                 src={
@@ -49,7 +49,7 @@ export const Contact = () => {
                 }
               />
             </Button>
-            <Button variant={"solid"} size={"sm"} mr={2}>
+            <Button  variant={"solid"} size={"sm"} mr={2}>
               <Avatar
                 size={"sm"}
                 src={
@@ -57,15 +57,18 @@ export const Contact = () => {
                 }
               />
             </Button>
-           <Link href='https://github.com/Ranjan095' target="_blank">
-           <Button variant={"solid"} size={"sm"} mr={2}>
-              <Avatar
+            <Button  id="contact-github" variant={"solid"} size={"sm"} mr={2}>
+             
+               <Link href='https://github.com/Ranjan095' target="_blank">
+               <Avatar
                 size={"sm"}
                 src={
                   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxJ9BLaQr8gi24WdvoAcllLM31YXU-35ip4A&usqp=CAU"
                 }
               />
-            </Button></Link>
+           </Link>
+            </Button>
+          
       <hr></hr><hr></hr><hr></hr><hr></hr><hr></hr><hr></hr><hr></hr>
     </Box>
   )
