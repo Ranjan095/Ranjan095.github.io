@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c6086546.css",
-    "main.js": "/static/js/main.cbd31afa.js",
+    "main.js": "/static/js/main.3288c3a2.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/orbitz.png": "/static/media/orbitz.29551a14c5f4e024d667.png",
     "static/media/KFC.png": "/static/media/KFC.b54db63121ecb7fba999.png",
@@ -9,11 +9,11 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.c6086546.css.map": "/static/css/main.c6086546.css.map",
-    "main.cbd31afa.js.map": "/static/js/main.cbd31afa.js.map",
+    "main.3288c3a2.js.map": "/static/js/main.3288c3a2.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c6086546.css",
-    "static/js/main.cbd31afa.js"
+    "static/js/main.3288c3a2.js"
   ]
 }
