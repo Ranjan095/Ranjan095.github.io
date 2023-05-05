@@ -59,6 +59,7 @@ export const Project = () => {
   return (
     <Box padding={'6%'} id="projects">
       <Box textAlign={"center"} >
+        <img></img>
         <Heading>My Projects</Heading>
       </Box>
       <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 2 }} marginTop={"3%"}>

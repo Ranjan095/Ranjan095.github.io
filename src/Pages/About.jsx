@@ -31,7 +31,7 @@ export const About = () => {
      
      <Box>
      <Button
-              id="resume-button-1 "
+             id="resume-button-2"
               onClick={handleResume} variant={"solid"} colorScheme={"teal"} size={"sm"} mr={0}>
                 <Link
                 id="resume-link-2"
