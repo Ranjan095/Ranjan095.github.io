@@ -62,7 +62,7 @@ export const NevBar = () => {
 
   return (
     <div
-    // id="nav-menu"
+    id="nav-menu"
       style={{
         position: "fixed",
         zIndex:'100',
