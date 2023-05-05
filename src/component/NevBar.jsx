@@ -52,7 +52,7 @@ export const NevBar = () => {
         bg: useColorModeValue("teal.300", "gray.100"),
       }}
       href={ids[children]}
-      className={`nav-link ${(ids[children].split("#")[1])}`}
+      className={`nav-link.${(ids[children].split("#")[1])}`}
       // className="ranjan"
     >
       {children}
