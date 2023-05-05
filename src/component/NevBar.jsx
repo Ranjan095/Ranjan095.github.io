@@ -52,8 +52,8 @@ export const NevBar = () => {
         bg: useColorModeValue("teal.300", "gray.100"),
       }}
       href={ids[children]}
-      className={`.nav-link.${(ids[children].split("#")[1])}`}
-      // className="ranjan"
+      // className={`.nav-link.${(ids[children].split("#")[1])}`}
+      
     >
       {children}
     </Link>
@@ -62,7 +62,7 @@ export const NevBar = () => {
 
   return (
     <div
-    id="nav-menu"
+    // id="nav-menu"
       style={{
         position: "fixed",
         zIndex:'100',

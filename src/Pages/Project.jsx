@@ -57,7 +57,9 @@ export const Project = () => {
   ];
 
   return (
-    <Box padding={'6%'} id="projects">
+    <Box padding={'6%'} 
+    id="projects"
+    >
       <Box textAlign={"center"} >
         <img></img>
         <Heading>My Projects</Heading>
