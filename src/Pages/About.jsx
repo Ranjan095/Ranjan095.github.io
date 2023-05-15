@@ -25,7 +25,7 @@ export const About = () => {
     <Box className="about section" padding={"6%"} id="about">
       <Heading padding={"1%"}>About Me</Heading>
       <Heading
-        //  id='user-detail-intro'
+        id="user-detail-intro"
         as="h4"
         size="md"
         fontFamily="sans-serif"
@@ -44,7 +44,7 @@ export const About = () => {
           id="resume-button-2"
           onClick={handleResume}
           variant={"solid"}
-          colorScheme={"teal"}
+          colorScheme="blue"
           size={"sm"}
           mr={0}
         >

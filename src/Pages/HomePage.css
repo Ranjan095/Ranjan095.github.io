@@ -1,0 +1,14 @@
+.typedWrapper {
+    background: linear-gradient(to left, #219b21, #dd6b20, #916142, #5f32b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: cursive;
+  }
+  
+  .typedCursor {
+    font-size: 36px;
+    animation: 1s blink step-end infinite;
+  }

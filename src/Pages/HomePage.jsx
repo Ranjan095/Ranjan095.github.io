@@ -2,25 +2,81 @@
 import styled from "styled-components";
 import React from "react";
 import { Image, Box, Flex, Heading } from "@chakra-ui/react";
+import Typewriter from "typewriter-effect";
+import "./HomePage.css";
 
 export const HomePage = () => {
   return (
-    <Box id="home" padding={'6%'}>
+    <Box id="home" padding={"6%"}>
       <Flex alignItems={"center"} justifyContent={"space-around"}>
-        <Box>
-          <Heading>Hello, my name is</Heading>
-          <Heading
-           id="user-detail-name"
-            style={{ fontFamily: "cursive", color: "red" }}
+        <Box width={"70%"}>
+          <Flex
+            id="user-detail-name"
+            justifyContent={"left"}
+            alignItems={"center"}
+            gap="3"
+            // border={'2px solid yellow'}
           >
-            Ranjan Yadav
-          </Heading>
-          <Heading>I'm a full stack web developer</Heading>
+            <Heading
+              size={{
+                base: "xs",
+                xs: "sm",
+                mdr: "md",
+                xl: "lg",
+              }}
+              fontWeight={"medium"}
+            >
+              Hello, my name is{" "}
+            </Heading>
+
+            <Typewriter
+              options={{
+                strings: ["Ranjan Yadav"],
+                autoStart: true,
+                loop: true,
+                delay: 150,
+                deleteSpeed: 50,
+                wrapperClassName: "typedWrapper",
+                cursorClassName: "typedCursor",
+              }}
+            />
+          </Flex>
+          <Flex
+            id="user-detail-name"
+            justifyContent={"left"}
+            alignItems={"center"}
+            gap="3"
+            // border={'2px solid yellow'}
+          >
+            <Heading
+              size={{
+                base: "xs",
+                xs: "sm",
+                mdr: "md",
+                xl: "lg",
+              }}
+              fontWeight={"medium"}
+            >
+              I'm a{" "}
+            </Heading>
+
+            <Typewriter
+              options={{
+                strings: ["Full-stack Web Developer"],
+                autoStart: true,
+                loop: true,
+                delay: 150,
+                deleteSpeed: 50,
+                wrapperClassName: "typedWrapper",
+                cursorClassName: "typedCursor",
+              }}
+            />
+          </Flex>
         </Box>
 
         <Box>
           <Image
-          class="home-img"
+            className="home-img"
             style={{
               width: "60%",
               height: "60%",
