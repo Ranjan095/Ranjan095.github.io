@@ -12,3 +12,22 @@
     font-size: 36px;
     animation: 1s blink step-end infinite;
   }
+  .dark{
+   color:yellow;
+   padding: "20px";
+   font-size: x-large;
+   font-weight: bold;
+  }
+  .light{
+    color:orange;
+    padding: "20px";
+    font-size: x-large;
+    font-weight: bold;
+  }
+  .cursor{
+    color: green;
+    font-size: x-large;
+  }.headingCursor{
+    font-size: xx-large;
+    color: green;
+  }

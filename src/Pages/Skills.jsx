@@ -16,7 +16,7 @@ import {
 import React, { useState } from "react";
 import styled from "styled-components";
 import "./skills.css";
-
+import Typewriter from "typewriter-effect";
 import redux from "../image/tekStack/redux.png";
 import Css from "../image/tekStack/Css.png";
 import Express from "../image/tekStack/Express.png";
@@ -99,7 +99,9 @@ let tecStack = [
 ];
 export const Skills = () => {
   let [data, setData] = useState(tecStack);
+  let [state, setState] = useState("all");
   let handleFilter = (val) => {
+    setState(val);
     if (val == "all") {
       setData(tecStack);
     } else {
@@ -110,21 +112,65 @@ export const Skills = () => {
 
   return (
     <Box padding={"6%"} textAlign={"center"} id="skills">
-      <Heading>TECH SKILLS</Heading>
+        <Typewriter
+                options={{
+                  strings: ["TECH SKILLS"],
+                  autoStart: true,
+                  loop: true,
+                  wrapperClassName: 'skillsName',
+                  cursorClassName: "headingCursor",
+                }}
+              />
+      {/* <Heading>TECH SKILLS</Heading> */}
       <Box p={"3%"}>
-        <Flex justifyContent={"center"} gap={7}>
-          <Button onClick={() => handleFilter("all")} colorScheme="blue">
+        
+        <Flex justifyContent={"center"} gap={{base:'4',sm:'5'}}>
+          <SimpleGrid gap={{base:'4',sm:'5'}} columns={{base:2,sm:4}}>
+          <Button
+            
+            onClick={() => handleFilter("all")}
+            bg={state == "all" ? "green" : "#0D74FF"}
+            color={state === "all" && "white"}
+            border={state === "all" && "1px solid red"}
+          _focus={{bg:"green"}}
+          _active={{bg:"green"}}
+          >
             All
           </Button>
-          <Button onClick={() => handleFilter("frontend")} colorScheme="blue">
+          <Button
+           _focus={{bg:"green"}}
+           _active={{bg:"green"}}
+            className={state === "frontend" ? "frontend" : "general"}
+            onClick={() => handleFilter("frontend")}
+            bg={state == "frontend" ? "green" : "#0D74FF"}
+            color={state === "frontend" && "white"}
+            border={state === "frontend" && "1px solid red"}
+          >
             Frontend
           </Button>
-          <Button onClick={() => handleFilter("backend")} colorScheme="blue">
+          <Button
+           _focus={{bg:"green"}}
+           _active={{bg:"green"}}
+            className={state === "backend" ? "backend" : "general"}
+            onClick={() => handleFilter("backend")}
+            bg={state == "backend" ? "green" : "#0D74FF"}
+            color={state === "backend" && "white"}
+            border={state === "backend" && "1px solid red"}
+          >
             Backend
           </Button>
-          <Button onClick={() => handleFilter("tool")} colorScheme="blue">
+          <Button
+           _focus={{bg:"green"}}
+           _active={{bg:"green"}}
+            className={state === "tools" ? "tools" : "general"}
+            onClick={() => handleFilter("tool")}
+            bg={state == "tool" ? "green" : "#0D74FF"}
+            color={state === "tool" && "white"}
+            border={state === "tool" && "1px solid red"}
+          >
             Tools
           </Button>
+          </SimpleGrid>
         </Flex>
       </Box>
 

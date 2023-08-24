@@ -16,7 +16,7 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
-
+import Typewriter from "typewriter-effect";
 export const Project = () => {
   const myProject = [
     {
@@ -51,7 +51,16 @@ export const Project = () => {
   return (
     <Box padding={"6%"} id="projects">
       <Box textAlign={"center"}>
-        <Heading>My Projects</Heading>
+        {/* <Heading>My Projects</Heading> */}
+        <Typewriter
+                options={{
+                  strings: ["My Projects"],
+                  autoStart: true,
+                  loop: true,
+                  wrapperClassName: 'skillsName',
+                  cursorClassName: "headingCursor",
+                }}
+              />
       </Box>
       <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 2 }} marginTop={"3%"}>
         {myProject?.map((el) => {

@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import {NevBar} from "./component/NevBar"
-import { About } from './Pages/About';
-import { HomePage } from './Pages/HomePage';
 import { Project } from './Pages/Project';
 import { Skills } from './Pages/Skills';
-import { Contact } from './Pages/Contact'
 import GithubStats from './component/GithubStats';
-import { useColorModeValue } from '@chakra-ui/react';
+import AboutUs from './Pages/AboutUs';
+import NavBar2 from './component/NaBar2';
+import Contact2 from './Pages/Contact2';
 function App() {
 
   return (
     <div className='App' >
-      <NevBar/>
-      <HomePage/>
-      <About/>
+      <NavBar2/>
+      <AboutUs/>
       <Skills/>
       <Project/>
       <GithubStats/>
-      <Contact/>
+      <Contact2/>
     </div>
   );
 }

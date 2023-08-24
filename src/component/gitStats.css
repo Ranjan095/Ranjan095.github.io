@@ -16,6 +16,7 @@
     z-index: -1;
     animation: animate 20s linear infinite;
     filter: blur(25px);
+    
   }
   
   .gitCalHeadingWrapper {
