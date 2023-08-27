@@ -14,6 +14,8 @@ import {
 } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 import "./HomePage.css";
+import { motion, spring } from "framer-motion";
+
 export default function AboutUs() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
@@ -29,30 +31,34 @@ export default function AboutUs() {
       >
         <Flex>
           <Box>
-            <Image
-              rounded={"md"}
-              alt={"product image"}
-              src={"https://avatars.githubusercontent.com/u/113471389?v=4"}
-              fit={"cover"}
-              align={"center"}
-              w={"100%"}
-              h={{ base: "100%", sm: "100%", lg: "100%" }}
-            />
+            <motion.div
+              initial={{ y: -500 }}
+              animate={{ y: 0 }}
+              transition={{ delay: 0.5, duration: 2, type: "tween" }}
+            >
+              <Image
+                rounded={"md"}
+                alt={"product image"}
+                src={"https://avatars.githubusercontent.com/u/113471389?v=4"}
+                fit={"cover"}
+                align={"center"}
+                w={"100%"}
+                h={{ base: "100%", sm: "100%", lg: "100%" }}
+              />
+            </motion.div>
           </Box>
         </Flex>
         <Stack>
           <Box as={"header"}>
-            
-              <Heading
-                lineHeight={1.1}
-                fontWeight={600}
-                fontSize={{ base: "2xl", sm: "4xl", lg: "5xl" }}
-                display={"inline-block"}
-              >
-                Hello,
-              </Heading><br/>
-              
-           
+            <Heading
+              lineHeight={1.1}
+              fontWeight={600}
+              fontSize={{ base: "2xl", sm: "4xl", lg: "5xl" }}
+              display={"inline-block"}
+            >
+              Hello,
+            </Heading>
+            <br />
 
             <br />
             <Flex gap={"10px"} align={"center"}>
@@ -60,7 +66,6 @@ export default function AboutUs() {
                 size={{
                   base: "md",
                   md: "lg",
-                
                 }}
                 fontWeight={"medium"}
               >
@@ -78,10 +83,9 @@ export default function AboutUs() {
             </Flex>
             <Flex gap={"10px"} align={"center"}>
               <Heading
-                 size={{
+                size={{
                   base: "md",
                   md: "lg",
-                
                 }}
                 fontWeight={"medium"}
               >
@@ -100,32 +104,39 @@ export default function AboutUs() {
             <br />
             <hr></hr>
             <br />
-            <Heading
-              id="user-detail-intro"
-              as="h5"
-              size="sm"
-              fontFamily="sans-serif"
-              lineHeight={8}
-              textAlign={"justify"}
+            <motion.div
+              initial={{ y: 500 }}
+              animate={{ y: 0 }}
+              transition={{ delay: 0.5, duration: 2, type: "tween" }}
             >
-              I am a Developer who know HTML, CSS, JavaScript, ReactJS, Redux,
-              Chakra, NodeJS, ExpressJS, MongoDB, Postman. Logical and
-              result-driven full-stack developer dedicated to building and
-              optimizing user-focused websites. Technically proficient and
-              analytic problem solver with a calm and focused demeanor.
-              {/* <Typewriter
-                options={{
-                  strings: [
-                    "  I am a Developer who know HTML, CSS, JavaScript, ReactJS, Redux, Chakra,NodeJS, ExpressJS, MongoDB, Postman. Logical and result-drivenfull-stack developer dedicated to building and optimizing user-focusedwebsites. Technically proficient and analytic problem solver with a calmand focused demeanor.",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                  delay: 30,
-                  wrapperClassName: "about",
-                  cursorClassName: "cursor",
-                }}
-              /> */}
-            </Heading>
+              {" "}
+              <Heading
+                id="user-detail-intro"
+                as="h5"
+                size="sm"
+                fontFamily="sans-serif"
+                lineHeight={8}
+                textAlign={"justify"}
+              >
+                I am a Developer who know HTML, CSS, JavaScript, ReactJS, Redux,
+                Chakra, NodeJS, ExpressJS, MongoDB, Postman. Logical and
+                result-driven full-stack developer dedicated to building and
+                optimizing user-focused websites. Technically proficient and
+                analytic problem solver with a calm and focused demeanor.
+                {/* <Typewriter
+              options={{
+                strings: [
+                  "  I am a Developer who know HTML, CSS, JavaScript, ReactJS, Redux, Chakra,NodeJS, ExpressJS, MongoDB, Postman. Logical and result-drivenfull-stack developer dedicated to building and optimizing user-focusedwebsites. Technically proficient and analytic problem solver with a calmand focused demeanor.",
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 30,
+                wrapperClassName: "about",
+                cursorClassName: "cursor",
+              }}
+            /> */}
+              </Heading>
+            </motion.div>
           </Box>
         </Stack>
       </SimpleGrid>

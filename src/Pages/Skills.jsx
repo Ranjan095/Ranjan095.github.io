@@ -25,6 +25,7 @@ import MongoDB from "../image/tekStack/MongoDB.webp";
 import Git from "../image/tekStack/Git.png";
 import Postman from "../image/tekStack/PostMan.png";
 import Thunder from "../image/tekStack/Thunder.png";
+import { motion, spring } from "framer-motion";
 let tecStack = [
   {
     name: "HTML",
@@ -49,7 +50,7 @@ let tecStack = [
   {
     name: "Chakra_ui",
     category: "frontend",
-    src: "https://camo.githubusercontent.com/ca111d0962771266e006390606428280ade8694ffaff0b0f8e20c46f924da06f/68747470733a2f2f6f70656e636f6c6c6563746976652e636f6d2f6368616b72612d75692f6f7267616e697a6174696f6e2f302f6176617461722e7376673f6176617461724865696768743d313330",
+    src: "https://avatars.githubusercontent.com/u/54212428?s=280&v=4",
   },
   {
     name: "Redux",
@@ -101,7 +102,6 @@ export const Skills = () => {
   let [data, setData] = useState(tecStack);
   let [state, setState] = useState("all");
   let handleFilter = (val) => {
-    setState(val);
     if (val == "all") {
       setData(tecStack);
     } else {
@@ -112,64 +112,62 @@ export const Skills = () => {
 
   return (
     <Box padding={"6%"} textAlign={"center"} id="skills">
-        <Typewriter
-                options={{
-                  strings: ["TECH SKILLS"],
-                  autoStart: true,
-                  loop: true,
-                  wrapperClassName: 'skillsName',
-                  cursorClassName: "headingCursor",
-                }}
-              />
+      <Typewriter
+        options={{
+          strings: ["TECH SKILLS"],
+          autoStart: true,
+          loop: true,
+          wrapperClassName: "skillsName",
+          cursorClassName: "headingCursor",
+        }}
+      />
       {/* <Heading>TECH SKILLS</Heading> */}
       <Box p={"3%"}>
-        
-        <Flex justifyContent={"center"} gap={{base:'4',sm:'5'}}>
-          <SimpleGrid gap={{base:'4',sm:'5'}} columns={{base:2,sm:4}}>
-          <Button
-            
-            onClick={() => handleFilter("all")}
-            bg={state == "all" ? "green" : "#0D74FF"}
-            color={state === "all" && "white"}
-            border={state === "all" && "1px solid red"}
-          _focus={{bg:"green"}}
-          _active={{bg:"green"}}
-          >
-            All
-          </Button>
-          <Button
-           _focus={{bg:"green"}}
-           _active={{bg:"green"}}
-            className={state === "frontend" ? "frontend" : "general"}
-            onClick={() => handleFilter("frontend")}
-            bg={state == "frontend" ? "green" : "#0D74FF"}
-            color={state === "frontend" && "white"}
-            border={state === "frontend" && "1px solid red"}
-          >
-            Frontend
-          </Button>
-          <Button
-           _focus={{bg:"green"}}
-           _active={{bg:"green"}}
-            className={state === "backend" ? "backend" : "general"}
-            onClick={() => handleFilter("backend")}
-            bg={state == "backend" ? "green" : "#0D74FF"}
-            color={state === "backend" && "white"}
-            border={state === "backend" && "1px solid red"}
-          >
-            Backend
-          </Button>
-          <Button
-           _focus={{bg:"green"}}
-           _active={{bg:"green"}}
-            className={state === "tools" ? "tools" : "general"}
-            onClick={() => handleFilter("tool")}
-            bg={state == "tool" ? "green" : "#0D74FF"}
-            color={state === "tool" && "white"}
-            border={state === "tool" && "1px solid red"}
-          >
-            Tools
-          </Button>
+        <Flex justifyContent={"center"} gap={{ base: "4", sm: "5" }}>
+          <SimpleGrid gap={{ base: "4", sm: "5" }} columns={{ base: 2, sm: 4 }}>
+            <Button
+              onClick={() => handleFilter("all")}
+              bg={state == "all" ? "green" : "#0D74FF"}
+              color={state === "all" && "white"}
+              border={state === "all" && "1px solid red"}
+              _focus={{ bg: "green" }}
+              _active={{ bg: "green" }}
+            >
+              All
+            </Button>
+            <Button
+              _focus={{ bg: "green" }}
+              _active={{ bg: "green" }}
+              className={state === "frontend" ? "frontend" : "general"}
+              onClick={() => handleFilter("frontend")}
+              bg={state == "frontend" ? "green" : "#0D74FF"}
+              color={state === "frontend" && "white"}
+              border={state === "frontend" && "1px solid red"}
+            >
+              Frontend
+            </Button>
+            <Button
+              _focus={{ bg: "green" }}
+              _active={{ bg: "green" }}
+              className={state === "backend" ? "backend" : "general"}
+              onClick={() => handleFilter("backend")}
+              bg={state == "backend" ? "green" : "#0D74FF"}
+              color={state === "backend" && "white"}
+              border={state === "backend" && "1px solid red"}
+            >
+              Backend
+            </Button>
+            <Button
+              _focus={{ bg: "green" }}
+              _active={{ bg: "green" }}
+              className={state === "tools" ? "tools" : "general"}
+              onClick={() => handleFilter("tool")}
+              bg={state == "tool" ? "green" : "#0D74FF"}
+              color={state === "tool" && "white"}
+              border={state === "tool" && "1px solid red"}
+            >
+              Tools
+            </Button>
           </SimpleGrid>
         </Flex>
       </Box>
@@ -181,22 +179,36 @@ export const Skills = () => {
       >
         {data.map((ele) => {
           return (
-            <Box key={Math.random()} className="tec-stack skills-card">
-              <Center width={"100%"} height={"100%"}>
-                <Image
-                  className="skillImage skills-card-img"
-                  src={ele.src}
-                  alt="tecStack Logo"
-                />
-              </Center>
-              <Box>
-                <Text
-                  className="skills-card-name"
-                  fontWeight="bold"
-                  fontSize="md"
-                >
-                  {ele.name}
-                </Text>
+            <Box>
+              <Box key={Math.random()} className="tec-stack skills-card">
+                <Center width={"100%"} height={"100%"}>
+                  <motion.div
+                    initial={{ x: "100vw" }}
+                    animate={{ x: 0 }}
+                    transition={{ type: "spring", delay: 0.5 }}
+                  >
+                    <Image
+                      className="skillImage skills-card-img"
+                      src={ele.src}
+                      alt="tecStack Logo"
+                    />
+                  </motion.div>
+                </Center>
+                <Box>
+                  <motion.div
+                    initial={{ x: "-100vw" }}
+                    animate={{ x: 0 }}
+                    transition={{ type: "spring", delay: 0.5 }}
+                  >
+                    <Text
+                      className="skills-card-name"
+                      fontWeight="bold"
+                      fontSize="md"
+                    >
+                      {ele.name}
+                    </Text>
+                  </motion.div>
+                </Box>
               </Box>
             </Box>
           );

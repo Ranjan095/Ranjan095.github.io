@@ -6,6 +6,7 @@ import GithubStats from './component/GithubStats';
 import AboutUs from './Pages/AboutUs';
 import NavBar2 from './component/NaBar2';
 import Contact2 from './Pages/Contact2';
+import Footer from './Pages/Footer';
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
       <Project/>
       <GithubStats/>
       <Contact2/>
+      <Footer/>
     </div>
   );
 }
