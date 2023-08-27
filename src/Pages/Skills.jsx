@@ -102,6 +102,7 @@ export const Skills = () => {
   let [data, setData] = useState(tecStack);
   let [state, setState] = useState("all");
   let handleFilter = (val) => {
+    setState(val);
     if (val == "all") {
       setData(tecStack);
     } else {
@@ -125,6 +126,13 @@ export const Skills = () => {
       <Box p={"3%"}>
         <Flex justifyContent={"center"} gap={{ base: "4", sm: "5" }}>
           <SimpleGrid gap={{ base: "4", sm: "5" }} columns={{ base: 2, sm: 4 }}>
+            {/* <motion.button
+              whileHover={{
+                scale: 1.1,
+                textShadow: "0px 0px 8px rgb(255, 255, 255)",
+                boxShadow: "0px 0px 8px rgb(255, 255, 255)",
+              }}
+            > */}
             <Button
               onClick={() => handleFilter("all")}
               bg={state == "all" ? "green" : "#0D74FF"}
@@ -135,6 +143,8 @@ export const Skills = () => {
             >
               All
             </Button>
+            {/* </motion.button> */}
+
             <Button
               _focus={{ bg: "green" }}
               _active={{ bg: "green" }}
@@ -146,6 +156,7 @@ export const Skills = () => {
             >
               Frontend
             </Button>
+
             <Button
               _focus={{ bg: "green" }}
               _active={{ bg: "green" }}
@@ -173,19 +184,19 @@ export const Skills = () => {
       </Box>
 
       <SimpleGrid
-        columns={{ base: 3, md: 4, lg: 5, xl: 7 }}
+        columns={{ base: 4, sm: 4, md: 5, lg: 6, xl: 7 }}
         spacing="40px"
         marginTop={"20px"}
       >
-        {data.map((ele) => {
+        {data.map((ele, i) => {
           return (
-            <Box>
+            <Box key={i}>
               <Box key={Math.random()} className="tec-stack skills-card">
                 <Center width={"100%"} height={"100%"}>
                   <motion.div
                     initial={{ x: "100vw" }}
                     animate={{ x: 0 }}
-                    transition={{ type: "spring", delay: 0.5 }}
+                    transition={{ type: "spring", duration: 2, delay: 0.5 }}
                   >
                     <Image
                       className="skillImage skills-card-img"
@@ -198,12 +209,18 @@ export const Skills = () => {
                   <motion.div
                     initial={{ x: "-100vw" }}
                     animate={{ x: 0 }}
-                    transition={{ type: "spring", delay: 0.5 }}
+                    transition={{ type: "spring", duration: 2, delay: 0.5 }}
                   >
                     <Text
                       className="skills-card-name"
                       fontWeight="bold"
-                      fontSize="md"
+                      fontSize={{
+                        base: "8px",
+                        sm: "10px",
+                        md: "12px",
+                        lg: "14px",
+                        xl: "14px",
+                      }}
                     >
                       {ele.name}
                     </Text>

@@ -32,9 +32,12 @@ export default function AboutUs() {
         <Flex>
           <Box>
             <motion.div
+              // initial={{ y: -500 }}
+              // animate={{ y: 0 }}
+              // transition={{ delay: 0.5, duration: 2, type: "tween" }}
               initial={{ y: -500 }}
               animate={{ y: 0 }}
-              transition={{ delay: 0.5, duration: 2, type: "tween" }}
+              transition={{ type: "spring", duration: 2, delay: 0.6 }}
             >
               <Image
                 rounded={"md"}
@@ -105,9 +108,13 @@ export default function AboutUs() {
             <hr></hr>
             <br />
             <motion.div
+              // initial={{ y: 500 }}
+              // animate={{ y: 0 }}
+              // transition={{type: "tween",duration: 2,delay: 0.5 }}
+
               initial={{ y: 500 }}
               animate={{ y: 0 }}
-              transition={{ delay: 0.5, duration: 2, type: "tween" }}
+              transition={{ type: "spring", duration: 2, delay: 1 }}
             >
               {" "}
               <Heading

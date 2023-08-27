@@ -4,7 +4,7 @@ import React from "react";
 import "./project.css";
 import orbitz from "../image/orbitz.png";
 import KFC from "../image/KFC.png";
-import Apple from "../image/Apple.png"
+import Apple from "../image/Apple.png";
 import {
   Box,
   Flex,
@@ -31,7 +31,8 @@ export const Project = () => {
     {
       image: Apple,
       name: "ElectroEmporium",
-      tecStack: "HTML | CSS | JS | REACT | REDUX | CHAKRA |NODE_JS | EXPRESS | MONGODB",
+      tecStack:
+        "HTML | CSS | JS | REACT | REDUX | CHAKRA |NODE_JS | EXPRESS | MONGODB",
       discription:
         "ElectroEmporium's objectives is to expand their sales to customers who have not yet own an Apple product. They do this not only through advertising but by expanding their distribution network as well. ",
       site: "https://electro-emporium.vercel.app/",
@@ -45,39 +46,60 @@ export const Project = () => {
         "KPC is an online non-veg food website where user can buy different kinds of chicken dishes and get delivered at the door-step within 24hrs.",
       site: "https://kpc.netlify.app/",
       gitHub: "https://github.com/rajeshuser/tall-question-6900",
-    }
+    },
   ];
 
   return (
-    <Box padding={"6%"} id="projects">
+    <Box padding={"1%"} id="projects">
       <Box textAlign={"center"}>
         {/* <Heading>My Projects</Heading> */}
         <Typewriter
-                options={{
-                  strings: ["My Projects"],
-                  autoStart: true,
-                  loop: true,
-                  wrapperClassName: 'skillsName',
-                  cursorClassName: "headingCursor",
-                }}
-              />
+          options={{
+            strings: ["My Projects"],
+            autoStart: true,
+            loop: true,
+            wrapperClassName: "skillsName",
+            cursorClassName: "headingCursor",
+          }}
+        />
       </Box>
       <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 2 }} marginTop={"3%"}>
         {myProject?.map((el) => {
           return (
-            <Box className="project-card proBox" key={Math.random()}>
+            <Box borderRadius={'lg'} padding={'2%'} className="project-card proBox" key={Math.random()}>
               <Link target={"_blank"} href={el.site}>
-              <Image className="proImage" src={el.image} />
-              </Link> 
-             
+                <Image className="proImage" src={el.image} />
+              </Link>
 
               <Box>
                 {" "}
-                
-                <Heading className="project-title">{el.name}</Heading>
-                <Heading className="project-tech-stack" as="h4" size="md">
-                  Tech Stack: {el.tecStack}
+                <Heading
+                  textShadow="1px 1px #f18a8a"
+                  size={{
+                    base: "8px",
+                    sm: "10px",
+                    md: "sm",
+                    lg: "md",
+                    xl: "md",
+                  }}
+                  className="project-title"
+                >
+                  {el.name}
                 </Heading>
+                <Text
+                  fontWeight={"bold"}
+                  className="project-tech-stack"
+                  as="h4"
+                  size={{
+                    base: "8px",
+                    sm: "10px",
+                    md: "sm",
+                    lg: "sm",
+                    xl: "sm",
+                  }}
+                >
+                  Tech Stack: {el.tecStack}
+                </Text>
               </Box>
               <Box>
                 <Flex>
