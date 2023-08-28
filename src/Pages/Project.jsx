@@ -87,7 +87,7 @@ export const Project = () => {
                   {el.name}
                 </Heading>
                 <Text
-                  fontWeight={"bold"}
+                  // fontWeight={"bold"}
                   className="project-tech-stack"
                   as="h4"
                   size={{

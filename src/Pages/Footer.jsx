@@ -12,6 +12,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
   Link,
+  Flex,
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import { ReactNode } from "react";
@@ -55,7 +56,7 @@ export default function Footer() {
         justify={"center"}
         align={"center"}
       >
-        <Heading size={{base:"md",sm:'lg',lg:'lg'}}>
+        <Heading size={{ base: "md", sm: "lg", lg: "lg" }}>
           Thanks for visiting <ViewIcon />
         </Heading>
         <Stack direction={"row"} spacing={6}>
@@ -88,10 +89,22 @@ export default function Footer() {
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Text>© 2023 Ranjan Yadav. All rights reserved</Text>
+          <Stack>
+            <Flex gap={"3px"}>
+              <Link
+                _hover={{ textDecoration: "none" }}
+                href="https://ranjanyadav.netlify.app/portfolioMsg"
+                target="_blank"
+              >
+                <Text>©</Text>
+              </Link>
+              <Text>2023 Ranjan Yadav. All rights reserved</Text>
+            </Flex>
+          </Stack>
+
           <Stack direction={"row"} spacing={6}>
             <Link href="https://twitter.com/iranjan96/" target="_blank">
-              <SocialButton label={"Twitter"} >
+              <SocialButton label={"Twitter"}>
                 <FaTwitter />
               </SocialButton>
             </Link>
