@@ -11,6 +11,7 @@ import {
   Heading,
   SimpleGrid,
   useColorMode,
+  Text,
 } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 import "./HomePage.css";
@@ -117,32 +118,23 @@ export default function AboutUs() {
               transition={{ type: "spring", duration: 2, delay: 1 }}
             >
               {" "}
-              <Heading
+              <Text
                 id="user-detail-intro"
                 as="h5"
-                size="sm"
+                // size="sm"
                 fontFamily="sans-serif"
-                lineHeight={8}
+                lineHeight={7}
                 textAlign={"justify"}
               >
-                I am a Developer who know HTML, CSS, JavaScript, ReactJS, Redux,
-                Chakra, NodeJS, ExpressJS, MongoDB, Postman. Logical and
-                result-driven full-stack developer dedicated to building and
-                optimizing user-focused websites. Technically proficient and
-                analytic problem solver with a calm and focused demeanor.
-                {/* <Typewriter
-              options={{
-                strings: [
-                  "  I am a Developer who know HTML, CSS, JavaScript, ReactJS, Redux, Chakra,NodeJS, ExpressJS, MongoDB, Postman. Logical and result-drivenfull-stack developer dedicated to building and optimizing user-focusedwebsites. Technically proficient and analytic problem solver with a calmand focused demeanor.",
-                ],
-                autoStart: true,
-                loop: true,
-                delay: 30,
-                wrapperClassName: "about",
-                cursorClassName: "cursor",
-              }}
-            /> */}
-              </Heading>
+                I am a <b>MERN stack developer</b> passionate about creating web
+                applications that effectively address real-world challenges. I
+                really enjoy learning all the time and staying up-to-date with
+                the latest technologies. Collaborative teamwork is my forte, and
+                I enjoy abstracting ideas into real solutions. If you're seeking
+                a MERN Stack developer who prioritises user-friendly apps and
+                top-notch code,<b> I am enthusiastic about the opportunity to
+                Contribute to your team.</b>
+              </Text>
             </motion.div>
           </Box>
         </Stack>
