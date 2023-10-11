@@ -3,6 +3,7 @@
 import React from "react";
 import "./project.css";
 import orbitz from "../image/orbitz.png";
+import durgauli from "../image/durgauli.png";
 import KFC from "../image/KFC.png";
 import Apple from "../image/Apple.png";
 import {
@@ -19,6 +20,16 @@ import {
 import Typewriter from "typewriter-effect";
 export const Project = () => {
   const myProject = [
+    {
+      image: durgauli,
+      name: "Durgauli.com",
+      tecStack:
+        "Next.js | Redux | context api | Node.js | MongoDB | Tailwind CSS",
+      discription:
+        "I created a website for our village to enhance communication and coordination within our Durga Puja organizing team. Durga Puja is a major event in our community, involving many members working together on various tasks. I recognized the need for a central platform to streamline our efforts, showcasing my web development skills and my dedication to addressing real community needs through technology.",
+      site: "https://durgauli.com/",
+      gitHub: "https://github.com/Ranjan095/Durgauli.com",
+    },
     {
       image: orbitz,
       name: "Travel At Ease",
@@ -66,7 +77,12 @@ export const Project = () => {
       <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 2 }} marginTop={"3%"}>
         {myProject?.map((el) => {
           return (
-            <Box borderRadius={'lg'} padding={'2%'} className="project-card proBox" key={Math.random()}>
+            <Box
+              borderRadius={"lg"}
+              padding={"2%"}
+              className="project-card proBox"
+              key={Math.random()}
+            >
               <Link target={"_blank"} href={el.site}>
                 <Image className="proImage" src={el.image} />
               </Link>
