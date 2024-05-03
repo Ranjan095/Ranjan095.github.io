@@ -126,14 +126,11 @@ export default function AboutUs() {
                 lineHeight={7}
                 textAlign={"justify"}
               >
-                I am a <b>MERN stack developer</b> passionate about creating web
-                applications that effectively address real-world challenges. I
-                really enjoy learning all the time and staying up-to-date with
-                the latest technologies. Collaborative teamwork is my forte, and
-                I enjoy abstracting ideas into real solutions. If you're seeking
-                a MERN Stack developer who prioritises user-friendly apps and
-                top-notch code,<b> I am enthusiastic about the opportunity to
-                Contribute to your team.</b>
+                Dynamic Full Stack Web Developer with tech experience in MERN
+                Stack technologies. Proficient in building both solo and
+                collaborative projects, demonstrating strong technical expertise
+                and effective teamwork. Skilled in creating scalable and
+                user-friendly web applications for optimal user experience.
               </Text>
             </motion.div>
           </Box>
