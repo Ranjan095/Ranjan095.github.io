@@ -27,7 +27,7 @@ export const Project = () => {
         "Next.js | Redux | context api | Node.js | MongoDB | Tailwind CSS",
       discription:
         "I created a website for our village to enhance communication and coordination within our Durga Puja organizing team. Durga Puja is a major event in our community, involving many members working together on various tasks. I recognized the need for a central platform to streamline our efforts, showcasing my web development skills and my dedication to addressing real community needs through technology.",
-      site: "https://durgauli.com/",
+      site: "https://durgauli.vercel.app/",
       gitHub: "https://github.com/Ranjan095/Durgauli.com",
     },
     {
