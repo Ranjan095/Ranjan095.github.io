@@ -65,7 +65,7 @@ let tecStack = [
   {
     name: "Tailwind CSS",
     category: "frontend",
-    src: "https://viget.imgix.net/tailwind-on-gray.png?auto=format%2Ccompress&crop=focalpoint&fit=crop&fp-x=0.5&fp-y=0.5&h=1280&ixlib=php-3.3.1&q=90&w=1280&s=4c4c630b7ac3e02b2eb8eda41ea91073",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDKn3vA2YUbXzN0ZC3gALWJ08gJN-Drl15w&s",
   },
   {
     name: "Chakra_ui",
