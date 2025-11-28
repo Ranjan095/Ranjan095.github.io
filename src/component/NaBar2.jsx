@@ -29,7 +29,7 @@ import {
 } from "@chakra-ui/icons";
 import ColorModeToggle from "../Assets/ColorModeToggle";
 import Resume from "../Assets/Resume.pdf";
-const Links = ["About", "Skills", "Project", "Contact"];
+const Links = ["Home","About", "Skills", "Project","GitHub", "Contact"];
 let handleResume = () => {
   window.open(
     "https://drive.google.com/file/d/1tbwBLvBbxT4fWaYldl0_UbFm4ms2er4b/view?usp=sharing"
@@ -37,9 +37,11 @@ let handleResume = () => {
 };
 const NavLink = (props) => {
   let ids = {
+    Home: "#home",
     About: "#about",
     Skills: "#skills",
     Project: "#projects",
+    GitHub: "#github",
     Contact: "#contact",
   };
   const { children } = props;

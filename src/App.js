@@ -9,10 +9,12 @@ import AboutUs from "./Pages/AboutUs";
 import NavBar2 from "./component/NaBar2";
 import Contact2 from "./Pages/Contact2";
 import Footer from "./Pages/Footer";
+import Home from "./Pages/Home";
 function App() {
   return (
     <div className="App">
       <NavBar2 />
+      <Home/>
       <AboutUs />
       <Skills />
       <Project />
