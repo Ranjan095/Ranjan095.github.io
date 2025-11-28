@@ -32,24 +32,24 @@ export default function AboutUs() {
       >
         <Flex>
           <Box>
-            <motion.div
+            {/* <motion.div
               // initial={{ y: -500 }}
               // animate={{ y: 0 }}
               // transition={{ delay: 0.5, duration: 2, type: "tween" }}
               initial={{ y: -500 }}
               animate={{ y: 0 }}
               transition={{ type: "spring", duration: 2, delay: 0.6 }}
-            >
-              <Image
-                rounded={"md"}
-                alt={"product image"}
-                src={"https://avatars.githubusercontent.com/u/113471389?v=4"}
-                fit={"cover"}
-                align={"center"}
-                w={"100%"}
-                h={{ base: "100%", sm: "100%", lg: "100%" }}
-              />
-            </motion.div>
+            > */}
+            <Image
+              rounded={"md"}
+              alt={"product image"}
+              src={"https://avatars.githubusercontent.com/u/113471389?v=4"}
+              fit={"cover"}
+              align={"center"}
+              w={"90%"}
+              h={{ base: "100%", sm: "100%", lg: "100%" }}
+            />
+            {/* </motion.div> */}
           </Box>
         </Flex>
         <Stack>
@@ -126,11 +126,16 @@ export default function AboutUs() {
                 lineHeight={7}
                 textAlign={"justify"}
               >
-                Dynamic Full Stack Web Developer with tech experience in MERN
-                Stack technologies. Proficient in building both solo and
-                collaborative projects, demonstrating strong technical expertise
-                and effective teamwork. Skilled in creating scalable and
-                user-friendly web applications for optimal user experience.
+                Results-driven MERN Stack Developer with over 3 years of
+
+                hands-on experience in building and deploying scalable, high-
+                performance web applications. Proficient in designing RESTful
+
+                APIs, cloud deployment on AWS, and modern frontend
+                technologies like React.js and Next.js. Delivered over 10+
+                production-grade projects, optimizing performance, security,
+                and usability. Recognized for improving system efficiency and
+                team collaboration in agile environments.
               </Text>
             </motion.div>
           </Box>
