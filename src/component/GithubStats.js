@@ -146,7 +146,7 @@ const GithubStats = () => {
           rowGap={{ base: "6", sm: "12", md: "16", lg: "20" }}
           wrap="wrap"
         >
-          <Image
+          {/* <Image
             id="github-stats-card"
             src={`https://github-readme-stats.vercel.app/api?username=Ranjan095&show_icons=true&locale=en&theme=${gitCardTheme}&bg_color=${gitCardBg}&border_radius=10&border_color=${gitCardBorder}&hide_border=true`}
             alt="readme-streak-stats-icons"
@@ -164,7 +164,7 @@ const GithubStats = () => {
             }}
             transition="0.5s"
             borderRadius="10px"
-          />
+          /> */}
 
           <Image
             id="github-top-langs"
