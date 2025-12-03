@@ -32,7 +32,7 @@ import Resume from "../Assets/Resume.pdf";
 const Links = ["Home","About", "Skills", "Project","GitHub", "Contact"];
 let handleResume = () => {
   window.open(
-    "https://drive.google.com/file/d/1tbwBLvBbxT4fWaYldl0_UbFm4ms2er4b/view?usp=sharing"
+    "https://drive.google.com/file/d/1RT_Vxw-Zbab6qtTyDxceq2IZHLp0QUXB/view?usp=drive_link"
   );
 };
 const NavLink = (props) => {
